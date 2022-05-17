@@ -14,7 +14,7 @@ function PersonalData() {
 
   const handlerOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
-    setImages(URL.createObjectURL(target.files[0]));
+    setImages(URL.createObjectURL(target.files![0]));
     ChangeImage(images);
   };
 

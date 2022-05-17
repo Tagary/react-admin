@@ -10,21 +10,13 @@ function NewNewsModal() {
   const [newsImage, setNewsImage] = React.useState('');
   const [idNews, setNewsId] = React.useState<number>(1);
 
-
-let infoId = 1;
-
-
-
+  let infoId = 1;
 
   React.useEffect(() => {
-    while(oneNews.some(e => e.id == infoId)) {
-
+    while (oneNews.some((e) => e.id == infoId)) {
       setNewsId(++infoId);
-
-      
     }
-    
-  },[])  
+  }, []);
 
   const handlerInputArticle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNewsArticle(e.target.value);
@@ -38,15 +30,10 @@ let infoId = 1;
   };
 
   const handlerImageNews = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
-    setNewsImage(URL.createObjectURL(target.files[0]));
+    setNewsImage(URL.createObjectURL(e.target.files![0]));
   };
 
- 
-  
-
   const handlerSave = () => {
-
     oneNews.push({
       id: idNews,
       article: newsArticle,
