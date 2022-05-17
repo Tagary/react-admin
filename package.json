@@ -2,7 +2,7 @@
   "name": "react-verstka",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tagary.github.io/react-admin/",
+  "homepage": "https://tagary.github.io/react-admin",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.2",
     "@testing-library/jest-dom": "^5.16.2",
