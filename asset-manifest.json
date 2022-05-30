@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/react-admin/static/css/main.f11da221.css",
-    "main.js": "/react-admin/static/js/main.e2984056.js",
+    "main.css": "/react-admin/static/css/main.52a90bcb.css",
+    "main.js": "/react-admin/static/js/main.4ec3de7d.js",
+    "static/media/diavolo_arm_sliced.png": "/react-admin/static/media/diavolo_arm_sliced.8a1d85fe2ce67478dc0b.png",
+    "static/media/editor.svg": "/react-admin/static/media/editor.f1a6523e599ccffe3fb63edbb055346b.svg",
+    "static/media/editnews.svg": "/react-admin/static/media/editnews.1da60d938b6975a64c40558d6a9558f4.svg",
+    "static/media/basketblue.svg": "/react-admin/static/media/basketblue.b029c1f8f2decd03fc85581a9071b2d7.svg",
+    "static/media/arrow__left.svg": "/react-admin/static/media/arrow__left.3b2e8942d34d616ee83f198fb15562e6.svg",
     "index.html": "/react-admin/index.html",
-    "main.f11da221.css.map": "/react-admin/static/css/main.f11da221.css.map",
-    "main.e2984056.js.map": "/react-admin/static/js/main.e2984056.js.map"
+    "static/media/down__arrow.svg": "/react-admin/static/media/down__arrow.4cf268c0dfd6db6c51cc27d2d9e0e604.svg",
+    "main.52a90bcb.css.map": "/react-admin/static/css/main.52a90bcb.css.map",
+    "main.4ec3de7d.js.map": "/react-admin/static/js/main.4ec3de7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f11da221.css",
-    "static/js/main.e2984056.js"
+    "static/css/main.52a90bcb.css",
+    "static/js/main.4ec3de7d.js"
   ]
 }
