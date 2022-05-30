@@ -1,6 +1,7 @@
 import React from 'react';
 import { useActions } from '../../redux/hooks/useActions';
 import { useTypedSelector } from '../../redux/hooks/useTypedSelector';
+import editor from '../../assets/images/editor.svg'
 
 function PersonalData() {
   const { edit, name, email, image } = useTypedSelector((state) => state.person);
@@ -13,8 +14,15 @@ function PersonalData() {
   React.useEffect(() => {}, [images]);
 
   const handlerOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
-    setImages(URL.createObjectURL(target.files![0]));
+    let reader ;
+    if (e.target.files && e.target.files[0]) {
+      reader = new FileReader();
+    reader.onload = function(e) {
+      setImages(e.target?.result as string)
+    }
+    reader.readAsDataURL(e.target.files[0]);
+  }
+
     ChangeImage(images);
   };
 
@@ -44,7 +52,7 @@ function PersonalData() {
 
         {!edit && (
           <div onClick={handlerEdit} className="topSide__change">
-            <img className="try__tochange" src="/images/svg/editor.svg" alt="" />
+            <img className="try__tochange" src={editor} alt="" />
             Редактировать
           </div>
         )}
@@ -58,7 +66,7 @@ function PersonalData() {
               type="file"
               accept="image/jpg"
             />
-            <img className="photo__avatarperson" src={image} alt="" />
+            <img className="photo__avatarperson" src={images} alt="" />
           </div>
         ) : (
           <div className="personalData__photo">
